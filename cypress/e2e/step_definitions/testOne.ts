@@ -1,4 +1,7 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
+import "@badeball/cypress-cucumber-preprocessor/support";
+import "../e2e/step_definitions/testOne"; // 🔹 Importa los pasos manualmente
+
 
 Given("I visit demoqa", () => {
   cy.visit("https://demoqa.com/text-box");
