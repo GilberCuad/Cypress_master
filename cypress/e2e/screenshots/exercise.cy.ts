@@ -2,20 +2,16 @@ import { ProjectOne } from "../../support/page/project/projectOne.cy";
 import 'cypress-xpath';
 import 'cypress-plugin-tab';
 
-
-describe('Page object model', () => {
+describe('', () => {
+  // cuando se ejecuta con el comando run se puede configurara para grabar videos
+  // por ejemplo npx cypress run --spec "cypress\e2e\screenshots\exercise.cy.ts"
   let projectIndex: ProjectOne;
 
-  beforeEach(async () => {
+  before(() => {
     projectIndex = new ProjectOne()
   })
 
-  Cypress.on('uncaught:exception', (err, runnable) => {
-    return false
-  })
-
-  it('call to method', () => {
+  it('', () => {
     projectIndex.visitHome();
-    projectIndex.section_one();
   })
 })

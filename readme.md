@@ -34,6 +34,16 @@ Manejos desde consola
 
 - c\_ y seleccionar las opciones: se debe copiar el elemento para que tome las opciones
 
+## cucumber implementation
+
+- install: npm install @badeball/cypress-cucumber-preprocessor
+
+## commands for delete the cypress caché
+
+- npx cypress cache clear
+- rm -rf node_modules package-lock.json
+- npm install
+
 ## author
 
 - gcuadrado
