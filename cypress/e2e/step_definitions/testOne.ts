@@ -7,8 +7,8 @@ Given("I visit demoqa", () => {
   cy.visit("https://demoqa.com/text-box");
 });
 
-When("I upload name", () => {
-  cy.get('#userName').should('be.visible').type('Gilber Cuadrado');
+When("I upload name {word}", (Name) => {
+  cy.get('#userName').should('be.visible').type("se añade -Name-");
 });
 
 When("I upload email", () => {
