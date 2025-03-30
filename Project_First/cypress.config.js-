@@ -1,0 +1,23 @@
+const { defineConfig } = require("cypress");
+
+module.exports = defineConfig({
+  e2e: {
+    "chromeWebSecurity": false,
+    // agregamos para que al navegar evite los CORS y navegue bajo un mismo dominio
+    setupNodeEvents(on, config) {
+      // implement node event listeners here
+    },
+
+    async setupNodeEvents(on, config) {
+      // Configura el preprocesador de Cucumber
+      await addCucumberPreprocessorPlugin(on, config);
+      on('file:preprocessor', createBundler({
+        plugins: [createEsbuildPlugin(config)],
+      }));
+
+      return config;
+    },
+    specPattern: 'cypress/e2e/**/*.feature', // Patrón para los archivos .feature
+    supportFile: 'cypress/support/e2e.js',
+  },
+});

@@ -1,0 +1,8 @@
+Notas curso cypress
+
+incialmente se debe iniciar con npm para instalar el package json
+
+// inciando el proyecto
+
+3. node_modules\.bin\cypress open  >> mirando que todo se ejecute sin problemas ò npx cypress open
+4. cy.visit() >> cy.get("") >> para añadir la paguna al cual queremos ingresar
